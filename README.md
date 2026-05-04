@@ -15,7 +15,7 @@ Designed a cloud security workflow that detects suspicious authentication activi
 - SIEM/SOAR Automation – Sentinel + Logic Apps
 - AI-Assisted Triage – summarize, classify severity, recommend actions
 - Incident Response – tagging, notifications, remediation guidance
-- 
+
 
 ## 🧰 Tech Stack
 Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
