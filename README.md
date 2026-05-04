@@ -3,9 +3,8 @@
 ## 🔎 Overview
 Designed a cloud security workflow that detects suspicious authentication activity, automates investigation, and applies AI-assisted triage to recommend response actions.
 
----
-## 🧱 Architecture (High Level)
 
+## 🧱 Architecture (High Level)
    ### Logs → Log Analytics → KQL Detection → Sentinel Incident → Logic App → AI Triage (Python) → Response
 
 
@@ -31,12 +30,13 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 
 
 ## 🔁 Workflow (Step-by-Step)
-1. KQL rule detects repeated failed logins followed by success
-2. Sentinel creates an incident
-3. Logic App triggers automatically
-4. Extracts user/IP/attempt data
-5. Python triage summarizes + classifies severity
-6. Applies response (tag, notify, recommend action)
+   1. KQL rule detects repeated failed logins followed by success
+   2. Sentinel creates an incident
+   3. Logic App triggers automatically
+   4. Extracts user/IP/attempt data
+   5. Python triage summarizes + classifies severity
+   6. Applies response (tag, notify, recommend action)
+
 
 
 ## 📥 Sample Input
@@ -56,42 +56,38 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 "recommendation": "Monitor account activity and enforce MFA."
 }
 
-## 🧪 Validation & Testing
 
-• Simulated authentication events to validate detection logic
-• Verified severity thresholds (Low/Medium/High)
-• Confirmed consistent response recommendations
+
+## 🧪 Validation & Testing
+   - Simulated authentication events to validate detection logic
+   - Verified severity thresholds (Low/Medium/High)
+   - Confirmed consistent response recommendations
 
 
 ## 🛡️ Preventative Controls
-
-• Enforce MFA and Conditional Access
-• Apply account lockout policies
-• Monitor risky sign-ins (Entra ID Protection)
+   - Enforce MFA and Conditional Access
+   - Apply account lockout policies
+   - Monitor risky sign-ins (Entra ID Protection)
 
 
 ## ⚠️ Limitations
-
-• Threshold-based detection may require tuning
-• AI triage is rule-based (not full ML)
-• Not yet deployed in production tenant
+   - Threshold-based detection may require tuning
+   - AI triage is rule-based (not full ML)
+   - Not yet deployed in production tenant
 
 
 ## 🚀 Future Enhancements
-
-• Integrate Azure OpenAI for advanced summarization
-• Deploy Python as Azure Function
-• Expand detections and add Sentinel dashboards
+   - Integrate Azure OpenAI for advanced summarization
+   - Deploy Python as Azure Function
+   - Expand detections and add Sentinel dashboards
 
 
 ## 📝 Deployment Note
-
 Designed and validated in a lab environment. Full deployment pending tenant approval.
 
 
 ## 🔗 Repository
-
-## https://github.com/92UKRHUYCOEV/AI-Assisted-Detection-Response-Pipeline
+   https://github.com/92UKRHUYCOEV/AI-Assisted-Detection-Response-Pipeline
 
 Built an AI-assisted detection and response pipeline using Microsoft Sentinel and KQL to identify brute-force login patterns. Automated workflows trigger alert triage, where a Python-based layer summarizes incidents, classifies severity, and recommends actions, improving alert clarity and response efficiency.
 
@@ -225,18 +221,18 @@ This testing confirms the workflow behaves as expected prior to full deployment.
 
 
 ## 🚧Limitations
-- Detection is based on threshold logic and may require tuning to reduce false positives
-- AI triage is rule-based and does not leverage full machine learning models
-- Workflow is designed for low-to-moderate alert volume and may require scaling for production use
-- I designed, tested, validated, and understand the limitations of a system
+   - Detection is based on threshold logic and may require tuning to reduce false positives
+   - AI triage is rule-based and does not leverage full machine learning models
+   - Workflow is designed for low-to-moderate alert volume and may require scaling for production use
+   - I designed, tested, validated, and understand the limitations of a system
 
 
 
 ## 🔧Future Enhancements
-- Integrate Azure OpenAI for advanced natural language summarization
-- Deploy Python logic as an Azure Function for full cloud integration
-- Expand detection rules to include additional attack patterns
--• Add dashboard visualization using Sentinel Workbooks
+   - Integrate Azure OpenAI for advanced natural language summarization
+   - Deploy Python logic as an Azure Function for full cloud integration
+   - Expand detection rules to include additional attack patterns
+   - Add dashboard visualization using Sentinel Workbooks
 
 
 
