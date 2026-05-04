@@ -159,11 +159,22 @@ This workflow shows how a Microsoft Sentinel incident triggers an Azure Logic Ap
 
 ---
 
-## 🎯Outcome
+## 🎯Confirmed Outcome
 - Better clarity
 - Faster Triage
 - Reduced Alert Fatigue
 - Improved Response efficiency
+
+---
+
+## 📐Design-level Implementation
+I designed the full detection and response pipeline, including KQL-based detection, automation workflow, and AI-assisted triage logic. While deployment is pending tenant approval, the system is fully defined and ready to implement.
+
+---
+
+## 💲Deployment Note
+This project was designed and validated in a lab environment. Full deployment within Azure Logic Apps and Microsoft Sentinel is pending tenant-level approval.
+The workflow, logic, and automation steps are fully defined and ready for implementation.
 
 
 
