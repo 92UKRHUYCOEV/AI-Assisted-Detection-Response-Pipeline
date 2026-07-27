@@ -28,7 +28,7 @@ Designed a cloud security workflow that detects suspicious authentication activi
 
 ## Problem Statement
 
-## Key Capabilities
+## Objectives 
 
 - Detection Engineering (KQL) – brute-force pattern detection
 - SIEM/SOAR Automation – Sentinel + Logic Apps
@@ -42,6 +42,16 @@ Designed a cloud security workflow that detects suspicious authentication activi
    <img width="1536" height="1024" alt="AI-Assisted-Detection- -Responce-Pipeline_ChatGPT Image July 27 2026" src="https://github.com/user-attachments/assets/ea557af1-3e0c-4cf8-a6ab-0070be3912a6" />
 </p>
 
+## Detection & Response Workflow
+   1. KQL rule detects repeated failed logins followed by success
+   2. Sentinel creates an incident
+   3. Logic App triggers automatically
+   4. Extracts user/IP/attempt data
+   5. Python triage summarizes + classifies severity
+   6. Applies response (tag, notify, recommend action)
+
+
+
 ## Tech Stack
 Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 
@@ -53,16 +63,6 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 |T1078 | Valid Accounts     |
 |TA0001 | Initial Access    |
 |TA0006 | Credential Access |
-
-
-## Workflow (Step-by-Step)
-   1. KQL rule detects repeated failed logins followed by success
-   2. Sentinel creates an incident
-   3. Logic App triggers automatically
-   4. Extracts user/IP/attempt data
-   5. Python triage summarizes + classifies severity
-   6. Applies response (tag, notify, recommend action)
-
 
 
 ## Sample Input
