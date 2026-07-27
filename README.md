@@ -9,6 +9,18 @@
 - [Objectives](#objectives)
 - [Solution Architecture](#solution-architecture)
 - [Detection Response Workflow](#detection-response-workflow)
+- [AI Decision Process](#ai-decision-process)
+- [Technology Stack](#technology-stack)
+- [Detection Logic](#detection-logic)
+- [AI Triage Engine](#ai-triage-engine)
+- [Sample Pipeline Execution](#sample-pipeline-execution)
+- [Automation & SOAR Integration](#automation--soar-integration)
+- [MITRE ATT&CK Mapping](#mitre-attck-mapping)
+- [Validation & Testing](#validation--testing)
+- [Current Limitations](#current-limitations)
+- [Future Enhancements](#future-enhancements)
+- [Repository Structure](#repository-structure)
+- [References](#references)
 
 ```
 
@@ -59,6 +71,7 @@ Designed a cloud security workflow that detects suspicious authentication activi
    <img width="1536" height="1024" alt="AI-Assisted-Detection- -Responce-Pipeline_ChatGPT Image July 27 2026" src="https://github.com/user-attachments/assets/ea557af1-3e0c-4cf8-a6ab-0070be3912a6" />
 </p>
 
+## Problem Statement
 
 ## Key Capabilities
 
