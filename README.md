@@ -4,12 +4,13 @@
 
 # Table of Contents
 
-- [Overview](#overview)
+- [1. Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [Objectives](#objectives)
 - [Solution Architecture](#solution-architecture)
 - [Detection Response Workflow](#detection-response-workflow)
 - [AI Decision Process](#ai-decision-process)
+-- AI Triage Decision Flow
 - [Technology Stack](#technology-stack)
 - [Detection Logic](#detection-logic)
 - [AI Triage Engine](#ai-triage-engine)
