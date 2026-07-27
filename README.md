@@ -1,16 +1,15 @@
 # AI-Assisted Detection & Response Pipeline (Microsoft Sentinel)
 ---
-## Structure
+# Structure
 
 # Table of Contents
 
-- [1. Overview](#overview)
+- [Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [Objectives](#objectives)
 - [Solution Architecture](#solution-architecture)
-- [Detection Response Workflow](#detection-response-workflow)
+- [Detection & Response Workflow](#detection--response-workflow)
 - [AI Decision Process](#ai-decision-process)
--- AI Triage Decision Flow
 - [Technology Stack](#technology-stack)
 - [Detection Logic](#detection-logic)
 - [AI Triage Engine](#ai-triage-engine)
@@ -23,54 +22,9 @@
 - [Repository Structure](#repository-structure)
 - [References](#references)
 
-```
-
-6. AI Decision Process
-   6.1 AI Triage Decision Flow
-
-7. Technology Stack
-
-8. Detection Logic
-   8.1 Microsoft Sentinel
-   8.2 KQL Analytics Rule
-   8.3 Sample Detection Query
-
-9. AI Triage Engine
-   9.1 Input Processing
-   9.2 Context Enrichment
-   9.3 Confidence Assessment
-   9.4 Severity Recommendation
-   9.5 Response Recommendation
-
-10. Sample Pipeline Execution
-    10.1 Alert Input
-    10.2 AI Analysis
-    10.3 Recommended Actions
-
-11. Automation & SOAR Integration
-
-12. MITRE ATT&CK Mapping
-
-13. Validation & Testing
-
-14. Current Limitations
-
-15. Future Enhancements
-
-16. Repository Structure
-
-17. References
-```
 
 ## Overview
 Designed a cloud security workflow that detects suspicious authentication activity, automates investigation, and applies AI-assisted triage to recommend response actions.
-
-## Solution Architecture (High Level)
-   ### Logs → Log Analytics → KQL Detection → Sentinel Incident → Logic App → AI Triage (Python) → Response
-   
-<p align="center">
-   <img width="1536" height="1024" alt="AI-Assisted-Detection- -Responce-Pipeline_ChatGPT Image July 27 2026" src="https://github.com/user-attachments/assets/ea557af1-3e0c-4cf8-a6ab-0070be3912a6" />
-</p>
 
 ## Problem Statement
 
@@ -81,6 +35,12 @@ Designed a cloud security workflow that detects suspicious authentication activi
 - AI-Assisted Triage – summarize, classify severity, recommend actions
 - Incident Response – tagging, notifications, remediation guidance
 
+## Solution Architecture (High Level)
+   ### Logs → Log Analytics → KQL Detection → Sentinel Incident → Logic App → AI Triage (Python) → Response
+   
+<p align="center">
+   <img width="1536" height="1024" alt="AI-Assisted-Detection- -Responce-Pipeline_ChatGPT Image July 27 2026" src="https://github.com/user-attachments/assets/ea557af1-3e0c-4cf8-a6ab-0070be3912a6" />
+</p>
 
 ## Tech Stack
 Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
