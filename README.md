@@ -3,17 +3,13 @@
 ## Structure
 
 # Table of Contents
-```
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
+- [Objectives](#objectives)
+- [Solution Architecture](#solution-architecture)
+- [Detection Response Workflow](#detection-response-workflow)
 
-3. Objectives
 
-4. Solution Architecture
-   4.1 Architecture Diagram
-
-5. Detection & Response Workflow
-   5.1 Workflow Diagram
 
 6. AI Decision Process
    6.1 AI Triage Decision Flow
