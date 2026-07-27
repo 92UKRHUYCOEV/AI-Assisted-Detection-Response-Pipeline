@@ -10,7 +10,7 @@
 - [Solution Architecture](#solution-architecture)
 - [Detection Response Workflow](#detection-response-workflow)
 
-
+```
 
 6. AI Decision Process
    6.1 AI Triage Decision Flow
@@ -49,11 +49,10 @@
 17. References
 ```
 
-## 🔎 Overview
+## Overview
 Designed a cloud security workflow that detects suspicious authentication activity, automates investigation, and applies AI-assisted triage to recommend response actions.
-```
 
-## 🧱 Solution Architecture (High Level)
+## Solution Architecture (High Level)
    ### Logs → Log Analytics → KQL Detection → Sentinel Incident → Logic App → AI Triage (Python) → Response
    
 <p align="center">
@@ -61,7 +60,7 @@ Designed a cloud security workflow that detects suspicious authentication activi
 </p>
 
 
-## ⚙️ Key Capabilities
+## Key Capabilities
 
 - Detection Engineering (KQL) – brute-force pattern detection
 - SIEM/SOAR Automation – Sentinel + Logic Apps
@@ -69,11 +68,11 @@ Designed a cloud security workflow that detects suspicious authentication activi
 - Incident Response – tagging, notifications, remediation guidance
 
 
-## 🧰 Tech Stack
+## Tech Stack
 Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 
 
-## 🧭 MITRE ATT&CK Mapping
+## MITRE ATT&CK Mapping
 |MITRE ID | Description |
 |:-----|:-------------------|
 |T1110 | Brute Force        |
@@ -82,7 +81,7 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 |TA0006 | Credential Access |
 
 
-## 🔁 Workflow (Step-by-Step)
+## Workflow (Step-by-Step)
    1. KQL rule detects repeated failed logins followed by success
    2. Sentinel creates an incident
    3. Logic App triggers automatically
@@ -92,7 +91,7 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 
 
 
-## 📥 Sample Input
+## Sample Input
 
 {
 "UserPrincipalName": "[user@company.com](mailto:user@company.com)",
@@ -101,7 +100,7 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 }
 
 
-## 📤 AI Triage Output
+## AI Triage Output
 
 {
 "severity": "Medium",
@@ -111,13 +110,13 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 
 
 
-## 🧪 Validation & Testing
+## Validation & Testing
    - Simulated authentication events to validate detection logic
    - Verified severity thresholds (Low/Medium/High)
    - Confirmed consistent response recommendations
 
 
-## 🛡️ Preventative Controls
+## Preventative Controls
    - Enforce MFA and Conditional Access
    - Apply account lockout policies
    - Monitor risky sign-ins (Entra ID Protection)
@@ -129,17 +128,17 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
    - Not yet deployed in production tenant
 
 
-## 🚀 Future Enhancements
+## Future Enhancements
    - Integrate Azure OpenAI for advanced summarization
    - Deploy Python as Azure Function
    - Expand detections and add Sentinel dashboards
 
 
-## 📝 Deployment Note
+## Deployment Note
 Designed and validated in a lab environment. Full deployment pending tenant approval.
 
 
-## 🔗 Repository
+## Repository
    https://github.com/92UKRHUYCOEV/AI-Assisted-Detection-Response-Pipeline
 
 Built an AI-assisted detection and response pipeline using Microsoft Sentinel and KQL to identify brute-force login patterns. Automated workflows trigger alert triage, where a Python-based layer summarizes incidents, classifies severity, and recommends actions, improving alert clarity and response efficiency.
@@ -149,28 +148,28 @@ Built an AI-assisted detection and response pipeline using Microsoft Sentinel an
 </p>
 
 
-## 🎨 Workflow Summary
+## Workflow Summary
 <p align="center">
 <img width="424" height="736" alt="AI-Asst-Detectio-Project_Work-Flow_ChatGPT Image May 4, 2026, 02_05_43 PM" src="https://github.com/user-attachments/assets/6b17406f-82f7-41d4-a637-a3b8e10d9f32" />
 </p>
 
 
 
-## 🚨 Sentinel Incident
+## Sentinel Incident
 <p align="center">
 <img width="1849" height="50" alt="image" src="https://github.com/user-attachments/assets/9f197043-e440-4c02-af13-73cd5d3b6b72" />
 </p>
 
 
 
-## 🚨 Sentinel Analytics
+## Sentinel Analytics
 <p align="center">
 <img width="2075" height="103" alt="image" src="https://github.com/user-attachments/assets/eb1eb73c-219e-4e3a-bdd0-459f31e15985" />
 </p>
 
 
 
-🧠 KQL Detection Rule (Brute Force Pattern)
+## KQL Detection Rule (Brute Force Pattern)
 ```MARKDOWN
 SigninLogs
 | where ResultType != 0  // failed logins
@@ -189,7 +188,7 @@ SigninLogs
 
 
 
-## ⚓ Alert Analysis & Triage Module (Python Logic App)
+## Alert Analysis & Triage Module (Python Logic App)
 Implemented an Azure Logic App trigger to automate incident response workflows based on Microsoft Sentinel alerts.
 The Logic App is triggered automatically when a Sentinel incident is created. It acts as the orchestration layer, pulling incident data, passing it to a Python-based triage function, and then executing response actions like tagging or notification.
 ```python
@@ -236,13 +235,13 @@ print(json.dumps(result, indent=2))
 ```
 
 
-## 🚧 Built Using
+## Built Using
 - JSON-based workflow definitions
 - Azure Logic App connectors (prebuilt API integrations)
 
 
 
-## 🔍Sample Input + Output
+## Sample Input + Output
 ### Sample Alert: Input
 
 {
@@ -261,7 +260,7 @@ print(json.dumps(result, indent=2))
 
 
 
-## 📌Validation & Testing
+## Validation & Testing
 The detection and triage logic were validated using simulated authentication data to ensure:
 - Accurate detection of brute-force patterns
 - Correct severity classification thresholds
@@ -273,7 +272,7 @@ This testing confirms the workflow behaves as expected prior to full deployment.
 ```
 
 
-## 🚧Limitations
+## Limitations
    - Detection is based on threshold logic and may require tuning to reduce false positives
    - AI triage is rule-based and does not leverage full machine learning models
    - Workflow is designed for low-to-moderate alert volume and may require scaling for production use
@@ -281,7 +280,7 @@ This testing confirms the workflow behaves as expected prior to full deployment.
 
 
 
-## 🔧Future Enhancements
+## Future Enhancements
    - Integrate Azure OpenAI for advanced natural language summarization
    - Deploy Python logic as an Azure Function for full cloud integration
    - Expand detection rules to include additional attack patterns
@@ -289,7 +288,7 @@ This testing confirms the workflow behaves as expected prior to full deployment.
 
 
 
-##🚨simplified trigger definition
+## simplified trigger definition
 ```JSON
 {
   "trigger": {
@@ -306,7 +305,7 @@ This testing confirms the workflow behaves as expected prior to full deployment.
 ```
 
 
-### ⚙️ How It Works (Step-by-Step)
+### How It Works (Step-by-Step)
 1. Sentinel detects suspicious activity
 2. Creates an incident
 3. Logic App trigger fires:
@@ -317,7 +316,7 @@ This testing confirms the workflow behaves as expected prior to full deployment.
    - Tag / notify / respond
 
 
-### 🔗 Common Connectors Used
+### Common Connectors Used
 - Microsoft Sentinel
 - Azure Monitor / Log Analytics
 - HTTP (to call Python or APIs)
@@ -330,13 +329,13 @@ This testing confirms the workflow behaves as expected prior to full deployment.
 </p>
 
 
-## 🗝️ Automation Trigger Workflow
+## Automation Trigger Workflow
 From alert to action—automatically.
 This workflow shows how a Microsoft Sentinel incident triggers an Azure Logic App to execute investigation and response steps, forming the foundation of scalable SIEM/SOAR operations.
 
 
 
-## 🤖 What this script does
+## What this script does
 - Analyzes alert data (failed attempts, user, IP)
 - Classifies Severit (High / Medium / Low)
 - Provides recommended response actions
@@ -344,14 +343,14 @@ This workflow shows how a Microsoft Sentinel incident triggers an Azure Logic Ap
 
 
 
-## 🧠 Why It Matters
+## Why It Matters
 - Enables SOAR (Security Orchestration, Automation, Response)
 - Removes manual triage steps
 - Scales security operations
 
 
 
-## 🎯Confirmed Outcome
+## Confirmed Outcome
 - Better clarity
 - Faster Triage
 - Reduced Alert Fatigue
@@ -359,12 +358,12 @@ This workflow shows how a Microsoft Sentinel incident triggers an Azure Logic Ap
 
 
 
-## 📐Design-level Implementation
+## Design-level Implementation
 I designed the full detection and response pipeline, including KQL-based detection, automation workflow, and AI-assisted triage logic. While deployment is pending tenant approval, the system is fully defined and ready to implement.
 
 
 
-## 💲Deployment Note
+## Deployment Note
 This project was designed and validated in a lab environment. Full deployment within Azure Logic Apps and Microsoft Sentinel is pending tenant-level approval.
 The workflow, logic, and automation steps are fully defined and ready for implementation.
 
