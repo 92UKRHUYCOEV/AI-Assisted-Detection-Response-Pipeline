@@ -1,11 +1,34 @@
 # AI-Assisted Detection & Response Pipeline (Microsoft Sentinel)
 
+## Structure
+
+# README
+ │
+ ├── Overview
+ ├── Problem Statement
+ ├── Objectives
+ ├── Architecture Diagram
+ ├── Workflow Diagram
+ ├── Technologies
+ ├── KQL Detection Example
+ ├── AI Triage Logic
+ ├── Sample Input
+ ├── Sample Output
+ ├── MITRE ATT&CK Mapping
+ ├── Validation & Testing
+ ├── Future Enhancements
+ └── References
+
 ## 🔎 Overview
 Designed a cloud security workflow that detects suspicious authentication activity, automates investigation, and applies AI-assisted triage to recommend response actions.
 
 
 ## 🧱 Architecture (High Level)
    ### Logs → Log Analytics → KQL Detection → Sentinel Incident → Logic App → AI Triage (Python) → Response
+   
+<p align="center">
+   <img width="1536" height="1024" alt="AI-Assisted-Detection- -Responce-Pipeline_ChatGPT Image July 27 2026" src="https://github.com/user-attachments/assets/ea557af1-3e0c-4cf8-a6ab-0070be3912a6" />
+</p>
 
 
 ## ⚙️ Key Capabilities
