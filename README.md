@@ -35,7 +35,7 @@ Designed a cloud security workflow that detects suspicious authentication activi
 - AI-Assisted Triage – summarize, classify severity, recommend actions
 - Incident Response – tagging, notifications, remediation guidance
 
-## Solution Architecture (High Level)
+## Solution Architecture
    ### Logs → Log Analytics → KQL Detection → Sentinel Incident → Logic App → AI Triage (Python) → Response
    
 <p align="center">
