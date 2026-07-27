@@ -50,9 +50,9 @@ Designed a cloud security workflow that detects suspicious authentication activi
    5. Python triage summarizes + classifies severity
    6. Applies response (tag, notify, recommend action)
 
+## AI Decision Process
 
-
-## Tech Stack
+## Technology Stack
 Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 
 
