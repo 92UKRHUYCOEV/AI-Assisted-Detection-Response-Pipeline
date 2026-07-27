@@ -55,6 +55,13 @@ Designed a cloud security workflow that detects suspicious authentication activi
 ## Technology Stack
 Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 
+## Detection Logic
+
+##  AI Triage Engine
+
+## Sample Pipeline Execution
+
+## Automation & SOAR Integration
 
 ## MITRE ATT&CK Mapping
 |MITRE ID | Description |
@@ -63,6 +70,16 @@ Microsoft Sentinel • Log Analytics • KQL • Azure Logic Apps • Python
 |T1078 | Valid Accounts     |
 |TA0001 | Initial Access    |
 |TA0006 | Credential Access |
+
+## Validation & Testing
+
+##  Current Limitations
+
+## Future Enhancements
+
+##  Repository Structure
+
+## References
 
 
 ## Sample Input
