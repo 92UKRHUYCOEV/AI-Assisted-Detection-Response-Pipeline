@@ -3,6 +3,7 @@
 ## Structure
 
 # Table of Contents
+
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [Objectives](#objectives)
@@ -50,7 +51,7 @@
 
 ## 🔎 Overview
 Designed a cloud security workflow that detects suspicious authentication activity, automates investigation, and applies AI-assisted triage to recommend response actions.
-
+```
 
 ## 🧱 Solution Architecture (High Level)
    ### Logs → Log Analytics → KQL Detection → Sentinel Incident → Logic App → AI Triage (Python) → Response
